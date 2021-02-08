@@ -1,0 +1,28 @@
+<h1>Eventos Escolar</h1>
+
+<table class="alt">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Título</th>
+      <th>Matéria</th>
+      <!-- <th>Professor</th> -->
+      <th>Tipo de Evento</th>
+      <th>Peso</th>
+      <th>Descrição</th>
+      <th>Data do Evento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let evento_escola of eventos_escolar" (click)="eventosEscolarClicked(evento_escola)">
+      <td>{{ evento_escola.id }}</td>
+      <td>{{ evento_escola.titulo }}</td>
+      <td>{{ evento_escola.materia }}</td>
+      <!-- <td>{{ evento_escola.professor.name }}</td> -->
+      <td>{{ evento_escola.tipoEvento }}</td>
+      <td>{{ evento_escola.peso }}</td>
+      <td>{{ evento_escola.descricao }}</td>
+      <td>{{ evento_escola.data_evento | date: 'dd/MM/yyyy'}}</td>
+    </tr>       
+  </tbody>
+</table>

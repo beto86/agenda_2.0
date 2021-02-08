@@ -1,0 +1,18 @@
+<h3>Detalhe do Professor</h3>
+Você esta editando: {{ selected_member.name }} - {{ selected_member.surname }}
+<span class="image left">
+    <img src="{{ selected_member.photo }}" alt="Foto de {{ selected_member.name }}" >
+</span>
+
+<input type="text" [(ngModel)]="selected_member.id" readonly> <br>
+<label>Nome</label>
+<input type="text" [(ngModel)]="selected_member.name"> <br>
+<label>Sobrenome</label>
+<input type="text" [(ngModel)]="selected_member.surname"> <br>
+<label>Telefone</label>
+<input type="text" [(ngModel)]="selected_member.phone"> <br>
+<ul class="actions">
+    <li><button (click)="update()" class="button primary">Update Member </button></li>
+    <li><button (click)="delete()" class="button primary">Delete Member </button></li>
+    <li><button (click)="newMember()" class="button primary">Novo </button></li>
+</ul>

@@ -1,0 +1,20 @@
+<h1>Eventos</h1>
+
+<table class="alt">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Título</th>
+      <th>Descrição</th>
+      <th>Data do Evento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let evento of eventos" (click)="eventoClicked(evento)">
+      <td>{{ evento.id }}</td>
+      <td>{{ evento.titulo }}</td>
+      <td>{{ evento.descricao }}</td>
+      <td>{{ evento.data_evento | date: 'dd/MM/yyyy' }}</td>
+    </tr>       
+  </tbody>
+</table>

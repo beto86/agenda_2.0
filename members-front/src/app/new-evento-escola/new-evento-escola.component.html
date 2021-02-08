@@ -1,0 +1,15 @@
+<h1>Novo Evento</h1>
+
+<label>Titulo</label>
+<input type="text" [(ngModel)]="evento_escola.titulo"> <br>
+<label>Matéria</label>
+<input type="text" [(ngModel)]="evento_escola.materia"> <br>
+<label>Tipo do Evento</label>
+<input type="text" [(ngModel)]="evento_escola.tipoEvento"> <br>
+<label>Peso</label>
+<input type="text" [(ngModel)]="evento_escola.peso"> <br>
+<label>Descrição</label>
+<input type="text" [(ngModel)]="evento_escola.descricao"> <br>
+<label>Data do Evento</label>
+<input type="text" [(ngModel)]="evento_escola.data_evento"> <br>
+<button (click)="save()">Salvar Evento</button>
